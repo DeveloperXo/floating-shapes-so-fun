@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    background-color: #111;
+    min-height: 100vh;
+    overflow: hidden;
+}
+span{
+    position: absolute;
+    pointer-events: none;
+}
+span::before{
+    content:  '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #000;
+    background: #fff;
+    background-size: cover;
+    animation: moveHearts 1s linear infinite;
+}
+@keyframes moveHearts {
+    0%{transform: translate(0) rotate(0deg);}
+    100%{transform: translate(300px) rotate(360deg);}
+}
